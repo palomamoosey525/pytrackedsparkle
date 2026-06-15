@@ -1,6 +1,6 @@
 package main
 import ("fmt";"os";"runtime";"time")
-const (appName = "token-manager-3717d5";version = "1.0.0")
+const (appName = "token-manager-a3ae61";version = "1.0.0")
 type Handler struct{Name string;Version string}
 func NewHandler() *Handler{return &Handler{Name:appName,Version:version}}
 func (h *Handler) Process(input string) string{fmt.Printf("[%s] Processing: %s\n",h.Name,input);return fmt.Sprintf("processed_%s_%d",input,time.Now().Unix())}
